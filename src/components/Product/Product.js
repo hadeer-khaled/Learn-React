@@ -1,11 +1,12 @@
 import 'App.css';
 import Card from "../Card/Card";
-import { useState } from 'react';
+import { useState , useRef} from 'react';
 
 import styles from "./Product.module.css"
 
 function Product (){
 
+    const inputToFilterWith = useRef(null);
     const [showProducts , setShowProducts] = useState(true)
 
     const [products , setProducts] = useState([
@@ -33,6 +34,10 @@ function Product (){
         setShowProducts(!showProducts)
     }
 
+    const filterHandler = () =>{
+        console.log(inputToFilterWith.current.value)
+    }
+
     return (
         <>
             <button onClick={()=>toggleShowHandler()}>
@@ -40,6 +45,7 @@ function Product (){
             </button>
                 
             <div className={`products ${showProducts ? styles.show : styles.hide} `}>
+                <input type='text' name='filter' placeholder='input anything to filter with' ref={inputToFilterWith} onChange={filterHandler}></input>
                 {products.map((product , idx)=>
                      <Card product ={product} key={idx}  deleteHandler = {deleteHandler}></Card>
                 )}
@@ -49,4 +55,3 @@ function Product (){
 }
 
 export default Product ;
-
