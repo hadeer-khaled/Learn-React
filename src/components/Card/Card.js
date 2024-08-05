@@ -3,7 +3,7 @@ function Card ({product , deleteHandler}){
 
     return(
         <>
-            <div className={CardCss.card}>
+            <div className={CardCss.card }>
                     <p>{product.name}</p>
                     <p>{product.salary}</p>
                 <button onClick={(e)=>deleteHandler(e,product.id)}> X </button>
