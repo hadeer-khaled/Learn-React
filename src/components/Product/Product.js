@@ -29,15 +29,19 @@ function Product (){
             console.log(products)
     }
 
+    const filteration = (value) =>{
+        console.log("from product" , value)
+    }
+
 
 
 
     return (
         <>
             <div className={`products`}>
-                <Filter></Filter>
+                <Filter filteration={filteration}></Filter>
                 {products.map((product , idx)=>
-                     <Card product ={product} key={idx}  deleteHandler = {deleteHandler}></Card>
+                     <Card product ={product} key={idx}  deleteHandler = {deleteHandler} ></Card>
                 )}
             </div>
         </>

@@ -1,11 +1,11 @@
 import { useState } from "react";
-function Filter (){
+function Filter ({filteration}){
 
     const [textToFilterWith , setTextToFilterWith ] = useState("")
 
     const filterHandler = (e)=> {
         setTextToFilterWith(e.target.value)
-        console.log(textToFilterWith)
+        filteration(e.target.value)
     }
 
     return  (
