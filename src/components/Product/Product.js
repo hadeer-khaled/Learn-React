@@ -8,11 +8,13 @@ import styles from "./Product.module.css"
 function Product (){
 
 
+
     const [products , setProducts] = useState([
         { id: 1 ,name:"mobile", salary:2000 },
         { id: 2 ,name:"car",    salary:5222000 },
         { id: 3 ,name:"bag", salary:600 },
     ])
+    const [filteredKey , setFilteredKey ] = useState("");
 
     const deleteHandler = (e , clickedIdx) =>{
             // console.log(clickedIdx)
@@ -30,19 +32,27 @@ function Product (){
     }
 
     const filteration = (value) =>{
-        console.log("from product" , value)
+        setFilteredKey(value);
     }
 
-
-
+    const filterHandler = () =>{
+        if(filteredKey.length !== 0){
+            return products.filter((product)=> product.name.includes(filteredKey) )
+        }
+        return products ;
+    }
 
     return (
         <>
             <div className={`products`}>
+
                 <Filter filteration={filteration}></Filter>
-                {products.map((product , idx)=>
+
+
+                {filterHandler().map((product , idx)=>
                      <Card product ={product} key={idx}  deleteHandler = {deleteHandler} ></Card>
                 )}
+
             </div>
         </>
     )
