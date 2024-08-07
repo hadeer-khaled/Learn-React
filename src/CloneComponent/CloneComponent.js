@@ -6,14 +6,19 @@ import "App.css"
 
 export default function CloneComponent() {
 
+  const callBackFunc = (val)=>{
+    console.log(val)
+  }
   return (
     <>
         <div>CloneComponent</div>
 
-        <Button color={"red"}>Single Button</Button>
+        <Button callBackFunc={callBackFunc} color={"red"}>Single Button</Button>
 
         <ButtonGroup>
-            <Button>First</Button>
+            <Button callBackFunc={callBackFunc}> 1  </Button>
+            <Button callBackFunc={callBackFunc}> 2 </Button>
+            <Button callBackFunc={callBackFunc}> 3  </Button>
         </ButtonGroup>
     </>
   )
