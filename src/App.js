@@ -1,12 +1,12 @@
 import 'App.css';
-import DynamicComponent from 'DynamicComponent/DynamicComponent';
+import SwipperApp from 'SwiperApp/SwiperApp';
 function App() {
   return (
     <div className="App">
       <h1>Hello from etax</h1>
 
 
-      <DynamicComponent></DynamicComponent>
+      <SwipperApp></SwipperApp>
     </div>
   );
 }
