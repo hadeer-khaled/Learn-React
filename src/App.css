@@ -1,3 +1,6 @@
+:root{
+  box-sizing: border-box;
+}
 .App {
   text-align: center;
 }
@@ -58,3 +61,20 @@
   margin: 10px 2px;    
 }
 
+.shapeone {
+  width: 80px;           
+  height: 80px;          
+  background-color: #3498db; 
+  border-radius: 20px;     
+  padding: 1px 20px;
+  margin: 5px auto;
+}
+
+.shapetwo {
+  width: 80px;            
+  height: 80px;           
+  background-color: #e74c3c; 
+  border-radius: 0;   
+  padding: 1px 20px;
+  margin: auto;
+}

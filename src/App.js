@@ -1,12 +1,12 @@
 import 'App.css';
-import CloneComponent from 'CloneComponent/CloneComponent';
+import DynamicComponent from 'DynamicComponent/DynamicComponent';
 function App() {
   return (
     <div className="App">
       <h1>Hello from etax</h1>
 
 
-      <CloneComponent></CloneComponent>
+      <DynamicComponent></DynamicComponent>
     </div>
   );
 }
