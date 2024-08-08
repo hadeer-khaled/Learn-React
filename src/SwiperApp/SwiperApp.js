@@ -16,11 +16,11 @@ const SwiperApp =  () =>{
   ];
   return (
     <>
-       <SwiperComponent data={data}>
+       <SwiperComponent data={data} slidesPerView={4} pagination = {true}  >
             <ShapeOne></ShapeOne>
        </SwiperComponent>
 
-       <SwiperComponent  data={data}>
+       <SwiperComponent  data={data}  navigation = {false}>
            <ShapeTwo></ShapeTwo>
        </SwiperComponent>
     </>
